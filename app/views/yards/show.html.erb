@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yard.name %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @yard.area %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @yard.phone_number %>
+</p>
+
+<p>
+  <strong>History:</strong>
+  <%= @yard.history %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @yard.status %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @yard.price %>
+</p>
+
+<%= link_to 'Edit', edit_yard_path(@yard) %> |
+<%= link_to 'Back', yards_path %>

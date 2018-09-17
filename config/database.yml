@@ -17,6 +17,6 @@ test:
 
 production:
   <<: *default
-  database: mobile_production
+  database: mobile_db
   username: mobile
   password: <%= ENV['MOBILE_DATABASE_PASSWORD'] %>

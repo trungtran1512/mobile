@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Yards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Area</th>
+      <th>Phone number</th>
+      <th>History</th>
+      <th>Status</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yards.each do |yard| %>
+      <tr>
+        <td><%= yard.name %></td>
+        <td><%= yard.area %></td>
+        <td><%= yard.phone_number %></td>
+        <td><%= yard.history %></td>
+        <td><%= yard.status %></td>
+        <td><%= yard.price %></td>
+        <td><%= link_to 'Show', yard %></td>
+        <td><%= link_to 'Edit', edit_yard_path(yard) %></td>
+        <td><%= link_to 'Destroy', yard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yard', new_yard_path %>
