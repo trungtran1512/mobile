@@ -11,8 +11,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootstrap-material-design', '~> 0.2.2'
 gem 'activeadmin'
+gem 'Platform', '~> 0.4.1'
 
 # Plus integrations with:
 gem 'devise'
