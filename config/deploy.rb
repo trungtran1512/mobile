@@ -4,7 +4,7 @@ lock '3.11.0'
 set :application, 'mobile'
 set :repo_url, "git@github.com:trungpro152224/mobile.git"
 set :branch, :develop
-set :deploy_to, '/home/deploy/apps/mobile'
+set :deploy_to, '/deploy/apps/mobile'
 set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
@@ -26,18 +26,6 @@ set :puma_workers, 0
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
-
-namespace :puma do
-  desc 'Create Directories for Puma Pids and Socket'
-  task :make_dirs do
-    on roles(:app) do
-      execute "mkdir #{shared_path}/tmp/sockets -p"
-      execute "mkdir #{shared_path}/tmp/pids -p"
-    end
-  end
-
-  before :start, :make_dirs
-end
 
 
 # Default branch is :master
