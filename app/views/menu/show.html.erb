@@ -3,20 +3,37 @@
 <head>
 </head>
   <body>
-    <ul class="nav nav-tabs bg-primary">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Another link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <button type="button" class="btn btn-raised btn-danger">Danger</button>
+    <nav class="navbar fixed-top navbar-light" style="background-color: teal;">
+      <div class="container">
+        <div class="fix-logo">
+          <a class="navbar-brand" href="#">DESIGN</a>
+          <span class="fix-span-title"> photo for everyone</span>
+        </div>
+        <div class="blog-header-nav">
+          <a href="#" class="navbar-brand" style="padding-top: 17px;">Colections</a>
+          <a href="#" class="navbar-brand" style="padding-top: 17px;">Explore</a>
+          <div class="dropdown">
+            <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="ex1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="material-icons" style="color: white;">more_vert</i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
+              <button class="dropdown-item" type="button">About</button>
+              <button class="dropdown-item" type="button">Contact</button>
+              <button class="dropdown-item" type="button">Store</button>
+              <button class="dropdown-item" type="button">History</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form class="form-inline my-2 my-lg-0">
+            <a href="https://google.com" class="navbar-brand" style="padding-top: 17px;">Login</a>
+              <button type="button" class="btn btn-outline-danger" style="color: white;">Sign Up</button>
+            <fieldset disabled>
+              <button type="button" class="btn btn-raised btn-secondary">Submit photo</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
