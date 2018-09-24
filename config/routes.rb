@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   
+  resources :posts
   root 'menu#show'
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
-
   resources :matches
   resources :yards
   resources :teams
   resources :users
+  resources :posts
 end

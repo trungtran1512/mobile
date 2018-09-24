@@ -6,12 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Birthday</th>
-      <th>Phone number</th>
-      <th>Contact</th>
-      <th>Level</th>
-      <th>Sex</th>
-      <th>Notes</th>
+      <th>Email</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,12 +15,7 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= user.birthday %></td>
-        <td><%= user.phone_number %></td>
-        <td><%= user.contact %></td>
-        <td><%= user.level %></td>
-        <td><%= user.sex %></td>
-        <td><%= user.notes %></td>
+        <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
