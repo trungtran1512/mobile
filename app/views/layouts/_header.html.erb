@@ -1,0 +1,35 @@
+    <!-- header -->
+    <header>
+      <nav class="navbar fixed-top navbar-light" style="background-color: teal;">
+        <div class="container">
+          <div class="fix-logo">
+            <%= link_to "DESIGN", '#', id: "logo", class: "navbar-brand"%>
+            <span class="fix-span-title"> Photo for everyone</span>
+          </div>
+          <div class="blog-header-nav">
+            <%= link_to "Colections", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
+            <%= link_to "Explore", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
+            <div class="dropdown">
+              <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="ex1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="material-icons" style="color: white;">more_vert</i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
+                <%= link_to "About", '#', class: "dropdown-item"%>
+                <%= link_to "Contact", '#', class: "dropdown-item"%>
+                <%= link_to "Store", '#', class: "dropdown-item"%>
+                <%= link_to "History", '#', class: "dropdown-item"%>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form class="form-inline my-2 my-lg-0">
+              <%= link_to "Login", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
+               <%= link_to "Sign up now", '#', class: "btn btn-outline-danger", style: "color: white;"%>
+              <fieldset disabled>
+                <button type="button" class="btn btn-raised btn-secondary">Submit photo</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
