@@ -2,8 +2,11 @@
     <header>
       <nav class="navbar fixed-top navbar-light" style="background-color: teal;">
         <div class="container">
+          <div class="logo-item">
+            <%= content_tag(:i, "3d_rotation", class: "material-icons") %>
+          </div>
           <div class="fix-logo">
-            <%= link_to "DESIGN", '#', id: "logo", class: "navbar-brand"%>
+            <%= link_to "DESIGN", root_path, id: "logo", class: "navbar-brand"%>
             <span class="fix-span-title"> Photo for everyone</span>
           </div>
           <div class="blog-header-nav">
@@ -11,7 +14,7 @@
             <%= link_to "Explore", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
             <div class="dropdown">
               <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="ex1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="material-icons" style="color: white;">more_vert</i>
+                <%= content_tag(:i, "more_vert", class: "material-icons", style: "color: white") %>
               </button>
               <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
                 <%= link_to "About", '#', class: "dropdown-item"%>
