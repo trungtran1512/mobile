@@ -13,11 +13,11 @@ class UsersController < InheritedResources::Base
   end
 
   def create
-  @user = User.new(user_params)    # Not the final implementation!
+  @user = User.new(user_params)
   if @user.save
-    flash[:success] = "Create user done!"
+    log_in @user
+    flash[:success] = "You have logged in successfully!"
     redirect_to @user
-    # Handle a successful save.
   else
     render 'new'
   end

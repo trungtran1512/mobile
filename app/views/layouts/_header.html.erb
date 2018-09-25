@@ -27,8 +27,23 @@
           </div>
           <div>
             <form class="form-inline my-2 my-lg-0">
-              <%= link_to "Login", login_path, class: "navbar-brand", style: "padding-top: 17px;"%>
-               <%= link_to "Sign up now !", sign_up_path, class: "btn btn-outline-danger", style: "color: white;"%>
+              <% if logged_in? %>
+                <%= link_to "Users", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </button>
+                  <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
+                    <%= link_to "Profile", current_user, class: "dropdown-item" %>
+                    <%= link_to "Settings", "#", class: "dropdown-item"%>
+                    <div class="dropdown-divider"></div>
+                    <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item"%>
+                  </div>
+                </div>
+              <% else %>
+                <%= link_to "Login", login_path, class: "navbar-brand", style: "padding-top: 17px;"%>
+                <%= link_to "Sign up now !", sign_up_path, class: "btn btn-outline-danger", style: "color: white;"%>
+                <% end %>
               <fieldset disabled>
                 <button type="button" class="btn btn-raised btn-secondary">Submit photo</button>
               </fieldset>
