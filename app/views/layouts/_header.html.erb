@@ -17,17 +17,18 @@
                 <%= content_tag(:i, "more_vert", class: "material-icons", style: "color: white") %>
               </button>
               <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
-                <%= link_to "About", '#', class: "dropdown-item"%>
-                <%= link_to "Contact", '#', class: "dropdown-item"%>
-                <%= link_to "Store", '#', class: "dropdown-item"%>
-                <%= link_to "History", '#', class: "dropdown-item"%>
+                <%= link_to "About", 'menu/about', class: "dropdown-item"%>
+                <%= link_to "Contact", 'menu/contact', class: "dropdown-item"%>
+                <%= link_to "Store", 'menu/store', class: "dropdown-item"%>
+                <%= link_to "History", 'menu/history', class: "dropdown-item"%>
+                <%= link_to "Help", 'menu/help', class: "dropdown-item"%>
               </div>
             </div>
           </div>
           <div>
             <form class="form-inline my-2 my-lg-0">
               <%= link_to "Login", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
-               <%= link_to "Sign up now", '#', class: "btn btn-outline-danger", style: "color: white;"%>
+               <%= link_to "Sign up now !", signup_path, class: "btn btn-outline-danger", style: "color: white;"%>
               <fieldset disabled>
                 <button type="button" class="btn btn-raised btn-secondary">Submit photo</button>
               </fieldset>
