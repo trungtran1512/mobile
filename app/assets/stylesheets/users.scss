@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* sidebar */
+$gray-base: #000 !default;
 $state-danger-text: #a94442 !default;
+$gray-lighter: lighten($gray-base, 93.5%) !default;
+
 aside {
   section.user_info {
     margin-top: 20px;
@@ -87,4 +90,14 @@ span .check {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
 }

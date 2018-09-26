@@ -6,7 +6,7 @@
             <%= content_tag(:i, "3d_rotation", class: "material-icons") %>
           </div>
           <div class="fix-logo">
-            <%= link_to "DESIGN", root_path, id: "logo", class: "navbar-brand"%>
+            <%= link_to "DESIGN", root_path, id: "logo", class: "navbar-brand", data: {turbolinks: false}%>
             <span class="fix-span-title"> Photo for everyone</span>
           </div>
           <div class="blog-header-nav">
@@ -28,21 +28,21 @@
           <div>
             <form class="form-inline my-2 my-lg-0">
               <% if logged_in? %>
-                <%= link_to "Users", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
+                <%= link_to "Users", users_path, class: "navbar-brand", style: "padding-top: 17px;", data: {turbolinks: false}%>
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Account
                     </button>
                   <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
                     <%= link_to "Profile", current_user, class: "dropdown-item" %>
-                    <%= link_to "Settings", "#", class: "dropdown-item"%>
+                    <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item"%>
                     <div class="dropdown-divider"></div>
                     <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item"%>
                   </div>
                 </div>
               <% else %>
-                <%= link_to "Login", login_path, class: "navbar-brand", style: "padding-top: 17px;"%>
-                <%= link_to "Sign up now !", sign_up_path, class: "btn btn-outline-danger", style: "color: white;"%>
+                <%= link_to "Login", login_path, class: "navbar-brand", style: "padding-top: 17px;", data: {turbolinks: false}%>
+                <%= link_to "Sign up now !", sign_up_path, class: "btn btn-outline-danger", style: "color: white;", data: {turbolinks: false}%>
                 <% end %>
               <fieldset disabled>
                 <button type="button" class="btn btn-raised btn-secondary">Submit photo</button>
