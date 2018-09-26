@@ -9,7 +9,11 @@
 
     <%= f.label :password %>
     <%= f.password_field :password, class: 'form-control' %>
-
+    <div class="checkbox">
+			<label> <%= f.check_box :remember_me, :as => :boolean, :label => false, :inline_label => true %>
+				<span>Remember me</span>
+			</label>
+		</div>
     <%= f.submit "Log in", class: "btn btn-lg btn-primary btn-block" %>
   <% end %>
 

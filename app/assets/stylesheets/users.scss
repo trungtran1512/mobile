@@ -73,3 +73,18 @@ input {
 .btn:not(.btn-link):not(.btn-flat), .btn-default:not(.btn-link):not(.btn-flat) {
   color: rgba(255, 255, 255, 0.84);
 }
+
+.checkbox {
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+span .check {
+  margin-left: -3px;
+}
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
