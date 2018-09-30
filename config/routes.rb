@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :posts
+  resources :account_activations, only: [:edit]
+  default_url_options :host => "54.214.109.30"
 end

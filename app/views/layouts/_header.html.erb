@@ -10,18 +10,18 @@
             <span class="fix-span-title"> Photo for everyone</span>
           </div>
           <div class="blog-header-nav">
-            <%= link_to "Colections", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
-            <%= link_to "Explore", '#', class: "navbar-brand", style: "padding-top: 17px;"%>
+            <%= link_to "Colections", '#', class: "navbar-brand", style: "padding-top: 17px;", data: {turbolinks: false}%>
+            <%= link_to "Explore", '#', class: "navbar-brand", style: "padding-top: 17px;", data: {turbolinks: false}%>
             <div class="dropdown">
               <button class="btn bmd-btn-icon dropdown-toggle" type="button" id="ex1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <%= content_tag(:i, "more_vert", class: "material-icons", style: "color: white") %>
               </button>
               <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
-                <%= link_to "About", about_path, class: "dropdown-item"%>
-                <%= link_to "Contact", contact_path, class: "dropdown-item"%>
-                <%= link_to "Store", store_path, class: "dropdown-item"%>
-                <%= link_to "History", history_path, class: "dropdown-item"%>
-                <%= link_to "Help", help_path, class: "dropdown-item"%>
+                <%= link_to "About", about_path, class: "dropdown-item", data: {turbolinks: false}%>
+                <%= link_to "Contact", contact_path, class: "dropdown-item", data: {turbolinks: false}%>
+                <%= link_to "Store", store_path, class: "dropdown-item", data: {turbolinks: false}%>
+                <%= link_to "History", history_path, class: "dropdown-item", data: {turbolinks: false}%>
+                <%= link_to "Help", help_path, class: "dropdown-item", data: {turbolinks: false}%>
               </div>
             </div>
           </div>
@@ -34,10 +34,10 @@
                       Account
                     </button>
                   <div class="dropdown-menu dropdown-menu-left" aria-labelledby="ex1">
-                    <%= link_to "Profile", current_user, class: "dropdown-item" %>
-                    <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item"%>
+                    <%= link_to "Profile", current_user, class: "dropdown-item", data: {turbolinks: false} %>
+                    <%= link_to "Settings", edit_user_path(current_user), class: "dropdown-item", data: {turbolinks: false}%>
                     <div class="dropdown-divider"></div>
-                    <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item"%>
+                    <%= link_to "Log out", logout_path, method: :delete, class: "dropdown-item", data: {turbolinks: false}%>
                   </div>
                 </div>
               <% else %>
