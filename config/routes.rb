@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+  get 'password_resets/edit'
   get 'sessions/new'
   root 'menu#show'
   get  '/help',    to: 'menu#help'
@@ -17,4 +19,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :account_activations, only: [:edit]
   default_url_options :host => "54.214.109.30"
+   resources :password_resets,     only: [:new, :create, :edit, :update]
 end
