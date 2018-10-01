@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   resources :posts
   resources :account_activations, only: [:edit]
   default_url_options :host => "54.214.109.30"
-   resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :posts,          only: [:create, :destroy]
 end
